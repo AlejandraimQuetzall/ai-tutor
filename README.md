@@ -34,7 +34,7 @@ This repository is the technical pipeline for Lynote's chapter learning path. Th
 ## 🚀 Quick start
 
 ```bash
-git clone https://github.com/molly554/ai-tutor.git
+git clone https://github.com/lynote-ai/ai-tutor.git
 cd ai-tutor
 cp .env.example .env          # Windows: Copy-Item .env.example .env
 docker compose up --build
