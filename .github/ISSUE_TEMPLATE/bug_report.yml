@@ -1,0 +1,33 @@
+name: Bug report
+description: Something in the open edition failed
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what you saw.
+    validations:
+      required: true
+  - type: input
+    id: health
+    attributes:
+      label: Health check
+      description: Paste the JSON from GET /api/health. Do not paste LLM_API_KEY or .env.
+      placeholder: '{"status":"ok","llm_configured":false}'
+  - type: dropdown
+    id: how
+    attributes:
+      label: How you ran it
+      options:
+        - Docker Compose
+        - Local API and Vite
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: Windows 11, macOS, Ubuntu

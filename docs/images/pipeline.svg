@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Lynote chapter learning path pipeline</title>
+  <desc id="desc">Materials are read, checked against the source, arranged into chapters, then taught and quizzed. DeepSeek, Jev, and Azure each use their own API key.</desc>
+  <rect width="1200" height="760" rx="24" fill="#F6F5F2"/>
+  <text x="40" y="48" fill="#1C1F23" font-family="Segoe UI, Inter, sans-serif" font-size="22" font-weight="700">Chapter path pipeline</text>
+  <text x="40" y="74" fill="#5C6168" font-family="Segoe UI, Inter, sans-serif" font-size="14">A claim is kept only when its quote is still a continuous excerpt of the source.</text>
+
+  <g font-family="Segoe UI, Inter, sans-serif">
+    <rect x="40" y="104" width="250" height="92" rx="14" fill="#FFFFFF" stroke="#E4E1DA"/>
+    <text x="58" y="136" fill="#865EFF" font-size="12" font-weight="700">01  READ</text>
+    <text x="58" y="160" fill="#1C1F23" font-size="15" font-weight="700">Files and links</text>
+    <text x="58" y="180" fill="#5C6168" font-size="12">PDF, slides, pages, captions</text>
+
+    <rect x="330" y="104" width="250" height="92" rx="14" fill="#FFFFFF" stroke="#E4E1DA"/>
+    <text x="348" y="136" fill="#865EFF" font-size="12" font-weight="700">02  LOCATE</text>
+    <text x="348" y="160" fill="#1C1F23" font-size="15" font-weight="700">Spans with a place</text>
+    <text x="348" y="180" fill="#5C6168" font-size="12">Page, slide, cue, or section</text>
+
+    <rect x="620" y="104" width="250" height="92" rx="14" fill="#FFFFFF" stroke="#E4E1DA"/>
+    <text x="638" y="136" fill="#865EFF" font-size="12" font-weight="700">03  EXTRACT</text>
+    <text x="638" y="160" fill="#1C1F23" font-size="15" font-weight="700">Copy a source sentence</text>
+    <text x="638" y="180" fill="#5C6168" font-size="12">DeepSeek writes the candidate</text>
+
+    <rect x="910" y="104" width="250" height="92" rx="14" fill="#173F34"/>
+    <text x="928" y="136" fill="#9DDEC8" font-size="12" font-weight="700">04  GATE</text>
+    <text x="928" y="160" fill="#FFFFFF" font-size="15" font-weight="700">Quote must match</text>
+    <text x="928" y="180" fill="#C9E7DC" font-size="12">Else the point is dropped</text>
+
+    <path d="M290 150 H330" stroke="#C8C4BB" stroke-width="1.5"/>
+    <path d="M580 150 H620" stroke="#C8C4BB" stroke-width="1.5"/>
+    <path d="M870 150 H910" stroke="#C8C4BB" stroke-width="1.5"/>
+    <polygon points="326,146 334,150 326,154" fill="#8A867E"/>
+    <polygon points="616,146 624,150 616,154" fill="#8A867E"/>
+    <polygon points="906,146 914,150 906,154" fill="#8A867E"/>
+  </g>
+
+  <g font-family="Segoe UI, Inter, sans-serif">
+    <rect x="40" y="236" width="360" height="168" rx="16" fill="#FFFFFF" stroke="#E4E1DA"/>
+    <text x="60" y="268" fill="#865EFF" font-size="12" font-weight="700">05  JUDGE</text>
+    <text x="60" y="294" fill="#1C1F23" font-size="16" font-weight="700">Does the quote support the claim?</text>
+    <text x="60" y="322" fill="#5C6168" font-size="13">Jev checks the copied sentence itself.</text>
+    <text x="60" y="344" fill="#5C6168" font-size="13">A heading, a number, or a sentence that</text>
+    <text x="60" y="366" fill="#5C6168" font-size="13">only works with the surrounding page is out.</text>
+
+    <rect x="420" y="236" width="360" height="168" rx="16" fill="#FFFFFF" stroke="#E4E1DA"/>
+    <text x="440" y="268" fill="#865EFF" font-size="12" font-weight="700">06  ARRANGE</text>
+    <text x="440" y="294" fill="#1C1F23" font-size="16" font-weight="700">Every kept point gets a chapter</text>
+    <text x="440" y="322" fill="#5C6168" font-size="13">Skipped ids are appended, not lost.</text>
+    <text x="440" y="344" fill="#5C6168" font-size="13">Unknown ids are ignored.</text>
+    <text x="440" y="366" fill="#5C6168" font-size="13">The path stops at 8 chapters.</text>
+
+    <rect x="800" y="236" width="360" height="168" rx="16" fill="#FFFFFF" stroke="#E4E1DA"/>
+    <text x="820" y="268" fill="#865EFF" font-size="12" font-weight="700">07  WRITE</text>
+    <text x="820" y="294" fill="#1C1F23" font-size="16" font-weight="700">Lesson, summary, two questions</text>
+    <text x="820" y="322" fill="#5C6168" font-size="13">DeepSeek may use only the quotes.</text>
+    <text x="820" y="344" fill="#5C6168" font-size="13">A question whose quote leaves its</text>
+    <text x="820" y="366" fill="#5C6168" font-size="13">chapter is discarded, not repaired.</text>
+  </g>
+
+  <path d="M1035 196 V220 H220 V236" fill="none" stroke="#C8C4BB" stroke-width="1.5"/>
+  <polygon points="216,228 220,236 224,228" fill="#8A867E"/>
+
+  <g font-family="Segoe UI, Inter, sans-serif">
+    <rect x="40" y="432" width="1120" height="132" rx="16" fill="#FFFFFF" stroke="#E4E1DA"/>
+    <text x="64" y="466" fill="#865EFF" font-size="12" font-weight="700">08  STUDY</text>
+    <text x="64" y="492" fill="#1C1F23" font-size="16" font-weight="700">Section 1 opens. Later sections stay locked until the check.</text>
+    <g>
+      <rect x="64" y="512" width="250" height="32" rx="16" fill="#F3EEFF"/>
+      <text x="189" y="533" text-anchor="middle" fill="#5B3CC4" font-size="13" font-weight="700">Points quote the file</text>
+      <rect x="330" y="512" width="250" height="32" rx="16" fill="#F3EEFF"/>
+      <text x="455" y="533" text-anchor="middle" fill="#5B3CC4" font-size="13" font-weight="700">Added lines are labeled</text>
+      <rect x="596" y="512" width="270" height="32" rx="16" fill="#F3EEFF"/>
+      <text x="731" y="533" text-anchor="middle" fill="#5B3CC4" font-size="13" font-weight="700">Check shows no answer</text>
+      <rect x="882" y="512" width="234" height="32" rx="16" fill="#173F34"/>
+      <text x="999" y="533" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">Next section unlocks</text>
+    </g>
+  </g>
+
+  <g font-family="Segoe UI, Inter, sans-serif">
+    <text x="40" y="604" fill="#8A867E" font-size="12" font-weight="700" letter-spacing="0.08em">API KEYS</text>
+    <rect x="40" y="620" width="360" height="96" rx="14" fill="#FFFFFF" stroke="#E4E1DA"/>
+    <text x="60" y="654" fill="#1C1F23" font-size="15" font-weight="700">DeepSeek</text>
+    <text x="60" y="678" fill="#5C6168" font-size="13">Extract, arrange, lesson, quiz, Ask</text>
+    <text x="60" y="698" fill="#865EFF" font-size="12" font-weight="700">Chat API key</text>
+
+    <rect x="420" y="620" width="360" height="96" rx="14" fill="#FFFFFF" stroke="#E4E1DA"/>
+    <text x="440" y="654" fill="#1C1F23" font-size="15" font-weight="700">Jev · OpenRouter</text>
+    <text x="440" y="678" fill="#5C6168" font-size="13">Support check. It does not write the lesson</text>
+    <text x="440" y="698" fill="#865EFF" font-size="12" font-weight="700">OpenRouter API key</text>
+
+    <rect x="800" y="620" width="360" height="96" rx="14" fill="#FFFFFF" stroke="#E4E1DA"/>
+    <text x="820" y="654" fill="#1C1F23" font-size="15" font-weight="700">Azure</text>
+    <text x="820" y="678" fill="#5C6168" font-size="13">Document Intelligence and Vision Read</text>
+    <text x="820" y="698" fill="#865EFF" font-size="12" font-weight="700">Azure API key</text>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+name: Feature request
+description: A parser, deploy fix, or docs change for the open edition
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: change
+    attributes:
+      label: What should the open edition do
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        Accounts, billing, and the production prompts stay on hosted Lynote. A request for those will be closed with a pointer to the product.
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: This request is about the open edition
+      options:
+        - label: I am asking for a parser, the study UI, deployment, or docs
+          required: true
